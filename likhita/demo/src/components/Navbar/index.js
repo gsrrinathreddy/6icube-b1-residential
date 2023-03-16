@@ -11,7 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import {  red } from '@mui/material/colors';
 import HomeIcon from '@mui/icons-material/Home';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
@@ -21,10 +21,12 @@ import SearchIcon from '@mui/icons-material/Search';
 import Favorite from '@mui/icons-material/Favorite';
 import Checkbox from '@mui/material/Checkbox';
 
+
 const pages = ['SkinCare', 'HairCare', 'MakeUp'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Navbar(props) {
+    const page=props.page
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -123,7 +125,7 @@ function Navbar(props) {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-                <Link to={page} style={{textDecoration:"none"}}>
+                
                   
               <Button
                 key={page}
@@ -132,7 +134,7 @@ function Navbar(props) {
               >
                 {page}
               </Button>
-              </Link>
+              
             ))}
           </Box>
 
